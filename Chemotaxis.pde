@@ -26,7 +26,7 @@ score += elapsedSeconds % 60;
   background(0);
   fill(255);
   textSize(50);
-  text("Your score is: " + (int)score/10, 150,350);
+  text("Your score is: " + (int)(score/10), 150,350);
     text("Refresh to play again", 100,550);
   score = 0;
   noLoop();
