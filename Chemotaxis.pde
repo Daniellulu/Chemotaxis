@@ -1,4 +1,5 @@
 Bacteria [] no;
+int score = 0;
  void setup()   
  {     
  	size(700,700);  
@@ -9,20 +10,23 @@ Bacteria [] no;
  }   
  void draw()   
  {    
-   int score = 0;
+  /*
     long elapsedTime = System.currentTimeMillis();
 long elapsedSeconds = elapsedTime / 1000;
 score += elapsedSeconds % 60;
+*/
   for(int i = 0; i < no.length; i++){
    no[i].move();
  	  no[i].show();
+ score++;
+ 
  if(get(mouseX,mouseY) != color(0,0,0))
 {
  
   background(0);
   fill(255);
   textSize(50);
-  text("Your score is: " + score, 150,350);
+  text("Your score is: " + (int)score/10, 150,350);
     text("Refresh to play again", 100,550);
   score = 0;
   noLoop();
